@@ -48,11 +48,13 @@ array=np.array([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]).reshape(-1,1)
 plt.scatter(x,y)
 plt.show()
 
-y_head=linear_reg.predict(array)
+y_head=linear_reg.predict(x)
 plt.plot(array,y_head,color="red")
 
 
-
+#%%
+from sklearn.metrics import r2_score
+print("r_square score: ",r2_score(y,y_head))
 
 
 
